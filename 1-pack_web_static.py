@@ -14,6 +14,5 @@ def do_pack():
         run("mkdir versions")
     local("tar -zcvf {} web_static".format(_path_))
     return _path_
-
     else:
         return None
