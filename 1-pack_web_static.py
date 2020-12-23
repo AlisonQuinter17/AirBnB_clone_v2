@@ -12,7 +12,7 @@ def do_pack():
 
     try:
         if path.exists("versions") is False:
-            run("mkdir versions")
+            local("mkdir versions")
         local("tar -zcvf {} web_static".format(pth))
         return pth
     except:
