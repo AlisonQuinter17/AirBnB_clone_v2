@@ -8,18 +8,17 @@ app = Flask(__name__)
 
 
 @app.teardown_appcontext
-def close_storage():
+def close_storage(self):
     """ Remove the current SQLAlchemy Session. """
     storage.close()
 
 
 @app.route('/states_list', strict_slashes=False)
-def list_of_states():
-    """ List States. """
-    states = list(storage.all(State).values())
-    states.sort(key=lambda state: state.name)
-
-    return render_template('7-states_list.html', slist=states)
+def h1():
+    """ List States """
+    s = list(storage.all('State').values())
+    s.sort(key=lambda state: state.name)
+    return render_template('7-states_list.html', slist=s)
 
 if __name__ == '__main__':
     app.run()
