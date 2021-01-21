@@ -40,7 +40,6 @@
 
 	border: 1px solid #DDDDDD;
 	border-radius: 4px;
-
 }
 
 .custom-popover .scrollable {
@@ -48,13 +47,22 @@
     overflow-y: auto;
 }
 
-.locations:hover .popover {
+.locations:hover .popover,
+.amenities:hover .popover {
 	display: inline-block;
 }
 
 .filter_amenities:hover .popover {
 	display: inline-block;
 }
+
+.amenities {
+	height: 100%;
+	width: 25%;
+	display: inline-grid;
+	position: relative;
+}
+
 
 ul {
 	list-style-type: none;
