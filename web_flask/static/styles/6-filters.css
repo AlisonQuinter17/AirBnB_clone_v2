@@ -40,6 +40,12 @@
 
 	border: 1px solid #DDDDDD;
 	border-radius: 4px;
+
+}
+
+.custom-popover .scrollable {
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 .locations:hover .popover {
